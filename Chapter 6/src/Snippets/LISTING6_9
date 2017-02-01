@@ -1,0 +1,9 @@
+﻿public class GourmetDrinksMachineFactory implements AbstractDrinksMachineFactory{
+    public DrinksMachine createCoffeeMachine() {
+        return new GourmetCoffeeMachine();
+    }
+    
+    public DrinksMachine createSoftDrinksMachine() {
+        return new GourmetSoftDrinksMachine();
+    }
+}

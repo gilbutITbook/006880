@@ -1,0 +1,5 @@
+﻿@AroundInvoke
+public logger(InvocationContext ic) throws Exception {
+    Object[] params = ic.getParameters();
+    logger.warning("건네받은 파라미터: " + params);
+}

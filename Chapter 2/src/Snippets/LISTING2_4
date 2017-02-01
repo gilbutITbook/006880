@@ -1,0 +1,5 @@
+﻿@Interceptors(LoggerInterceptor.class)
+public void setValues(Integer value, String name) {
+    this.value = value;
+    this.name = name;
+}

@@ -1,0 +1,25 @@
+﻿public class WashingMachine {
+    public void heavilySoiled() {
+        setWaterTemperature(100);
+        setWashCycleDuration(90);
+        setSpinCycleDuration(10);
+        addDetergent();
+        addBleach();
+        addFabricSoftener();
+        heatWater();
+        startWash();
+    }
+
+    public void lightlySoiled() {
+        setWaterTemperature(40);
+        setWashCycleDuration(20);
+        setSpinCycleDuration(10);
+        addDetergent();
+        heatWater();
+        startWash();
+    }
+}
+
+
+// 퍼사드는 이렇게 사용합니다.
+new WashingMachine().lightlySoiled();

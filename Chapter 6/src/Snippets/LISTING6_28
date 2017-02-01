@@ -1,0 +1,10 @@
+﻿@Qualifier
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ ElementType.FIELD, ElementType.TYPE })
+public @interface Message {
+    Type value();
+
+    enum Type {
+        SHORT, LONG
+    }
+}

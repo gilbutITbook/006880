@@ -1,0 +1,16 @@
+﻿@Interceptors annotation:
+@Interceptors(SecurityInterceptor.class, AnotherInterceptor.class)
+@Stateless
+@TransactionAttribute(TransactionAttributeType.REQUIRED)
+public class SomeBusinessService {
+    public void startService(){
+    // ...
+         
+         
+         
+@Stateless
+@TransactionAttribute(TransactionAttributeType.REQUIRED)
+public class SomeBusinessService {
+    @Interceptors(SecurityInterceptor.class, AnotherInterceptor.class)
+    public void startService(){
+    // ...

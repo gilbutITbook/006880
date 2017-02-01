@@ -1,0 +1,12 @@
+﻿package com.devchronicles.websockets;
+
+@ServerEndpoint("/hello")
+public class HelloEndpoint {
+
+    @OnMessage
+    public void onMessage(Session session, String msg) {
+        try {
+            session.getBasicRemote().sendText("안녕, " + msg);
+        } catch (IOException e) { }
+    }
+}

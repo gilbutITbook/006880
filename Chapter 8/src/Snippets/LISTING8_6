@@ -1,0 +1,24 @@
+﻿package com.devchronicles.interceptor;
+
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.enterprise.event.Event;
+import javax.inject.Inject;
+import javax.interceptor.Interceptors;
+
+@Stateless
+@TransactionAttribute(TransactionAttributeType.REQUIRED)
+public class SomeBusinessService {
+
+    @Interceptors(SecurityInterceptor.class)
+    public void startService(){
+        // 복잡한 비즈니스 로직
+        Logger.getLogger("AppLog").info("완료...");
+    }
+    
+    public void startAnotherService(){
+        // 복잡한 비즈니스 로직
+        Logger.getLogger("AppLog").info("도 완료...");
+    }
+}

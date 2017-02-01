@@ -1,0 +1,12 @@
+﻿package com.devchronicles.singleton; 
+
+public class MySingleton {
+
+    private final static MySingleton instance=new MySingleton();
+
+    private MySingleton() {}
+
+    public static MySingleton getInstance() {
+        return instance;
+    }
+}

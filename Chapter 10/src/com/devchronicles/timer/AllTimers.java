@@ -1,0 +1,27 @@
+﻿package com.devchronicles.timer;
+
+import java.util.Collection;
+import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
+import javax.ejb.Singleton;
+import javax.ejb.Startup;
+import javax.ejb.Timer;
+import javax.ejb.TimerService;
+
+
+@Singleton
+@Startup
+public class AllTimers {
+    @Resource
+    TimerService timerService;
+
+    @PostConstruct
+    public void manageTimer() {
+        Collection<Timer> timers = timerService.getAllTimers();
+        for (Timer t : timers) {
+            System.out.println("타이머 정보: " + t.getInfo());
+            System.out.println("남은 시간: " + t.getTimeRemaining());
+            t.cancel();
+        }
+    }
+}

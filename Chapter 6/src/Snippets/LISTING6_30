@@ -1,0 +1,12 @@
+﻿@Dependent
+public class MessageFactory {
+    @Inject
+    @Any
+    private Instance<MessageType> messages;
+
+    public MessageType getMessage(Message.Type type) {
+        MessageLiteral literal = new MessageLiteral(type);
+        Instance<MessageType> typeMessages = messages.select(literal);
+        return typeMessages.get();
+    }
+}

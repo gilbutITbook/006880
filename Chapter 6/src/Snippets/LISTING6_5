@@ -1,0 +1,5 @@
+﻿public class SoftDrink implements Drink {
+    SoftDrink() {
+        System.out.println("탄산 음료");
+    }
+}

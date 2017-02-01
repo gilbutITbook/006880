@@ -1,0 +1,25 @@
+﻿<ejb-jar...>
+    <interceptors>
+        <interceptor>
+            <interceptor-class>
+                com.devchronicles.SecurityInterceptor
+            </interceptor-class>
+            <interceptor-class>
+                com.devchronicles.AnotherInterceptor
+            </interceptor-class>
+        </interceptor>
+    </interceptors>
+    <assembly-descriptor>
+        <interceptor-binding>
+            <ejb-name>OrderBean</ejb-name>
+            <interceptor-order>
+                <interceptor-class>
+                    com.devchronicles.SecurityInterceptor
+                </interceptor-class>
+            </interceptor-order>
+            <interceptor-class>
+                com.devchronicles.AnotherInterceptor
+            </interceptor-class>
+        </interceptor-binding>
+    </assembly-descriptor>
+</ejb-jar>

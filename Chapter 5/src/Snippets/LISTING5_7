@@ -1,0 +1,13 @@
+﻿package com.devchronicale.di;
+
+import javax.inject.Inject;
+
+class UserService {
+
+    @Inject
+    private UserDataRepository udr;
+
+    public void persistUser(User user) {
+        udr.save(user);
+    }
+}

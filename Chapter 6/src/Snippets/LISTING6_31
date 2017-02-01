@@ -1,0 +1,18 @@
+﻿@TransactionAttribute(TransactionAttributeType.REQUIRED)
+@ApplicationScoped
+public class Client {
+
+    @Inject
+    MessageFactory mf;
+
+    public void doMessage(){
+        MessageType m = mf.getMessage(Message.Type.SHORT);
+        m.setMessage("이것은 짧은 메시지입니다.");
+
+        System.out.println(m.getMessage());
+        
+        m = mf.getMessage(Message.Type.LONG);
+        m.setMessage("이것은 긴 메시지입니다.");
+        System.out.println(m.getMessage());
+    }
+}

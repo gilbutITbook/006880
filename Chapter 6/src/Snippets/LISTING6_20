@@ -1,0 +1,10 @@
+﻿@Qualifier
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ ElementType.METHOD, ElementType.FIELD })
+public @interface MyEvent {
+    Type value();
+
+    enum Type {
+        LOGGING, MESSAGE
+    }
+}

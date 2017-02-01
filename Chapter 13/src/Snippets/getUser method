@@ -1,0 +1,19 @@
+﻿@GET
+@Path("/{id}")
+@Produces(MediaType.APPLICATION_JSON)
+public Response getUser(@PathParam("id") String id){
+    User user = this.findUser(id);
+    JsonArrayBuilder jsonArrayBuilder = Json.createArrayBuilder();
+    jsonArrayBuilder.add(
+        Json.createObjectBuilder()
+            .add("id", user.getId())
+            .add("firstname", user.getFirstname())
+            .add("lastname", user.getLastname())
+    );
+        
+    return Response.ok(jsonArrayBuilder.build()).build();
+}
+
+public User findUser(String id){
+    return new User("123456", "Alex","Theedom");
+}

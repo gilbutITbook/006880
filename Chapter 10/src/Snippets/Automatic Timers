@@ -1,0 +1,17 @@
+﻿@Schedule(second="*/1", minute="*", hour="*")
+public void executeTask(){
+    System.out.println("작업을 실행하였습니다.");
+}
+
+@Schedule(hour = "23", minute = "59", timezone = "CET", info = "야간 보고서를 생성")
+public void executeTask(){
+    System.out.println("작업을 실행하였습니다.");
+}
+
+@Schedules({
+    @Schedule(dayOfMonth = "1"),
+    @Schedule(dayOfWeek = "Mon,Tue,Wed,Thu,Fri", hour = "8")
+})
+public void executeTask() {
+    System.out.println("작업을 실행하였습니다.");
+}

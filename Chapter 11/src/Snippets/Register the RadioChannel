@@ -1,0 +1,11 @@
+﻿// 옵저버와 실체를 만듭니다.
+NewsAgency newsAgency = new NewsAgency();
+RadioChannel radioChannel = new RadioChannel();
+
+// 실체에 옵저버를 등록합니다.
+newsAgency.register(radioChannel);
+
+// 이제 뉴스 머릿기사를 추가합니다.
+newsAgency.addNews("오늘의 뉴스: 화성에 생명체 포착");
+newsAgency.addNews("업데이트: 지구 침공 일촉즉발");
+newsAgency.addNews("방금 들어온 소식: 화성인 군주 폐하 만세!");

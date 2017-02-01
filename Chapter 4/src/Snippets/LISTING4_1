@@ -1,0 +1,14 @@
+﻿package com.devchronicles.singleton; 
+
+public class MySingleton { 
+    private static MySingleton instance;
+
+        private MySingleton() {} 
+
+        public static MySingleton getInstance() { 
+            if (instance==null){ // 1
+                instance=new MySingleton();
+            }
+            return instance;
+        }
+}

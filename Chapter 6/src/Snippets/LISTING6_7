@@ -1,0 +1,10 @@
+﻿public enum CoffeeType {EXPRESSO, LATTE}
+
+public Drink dispenseDrink(CoffeeType type) {
+    Drink coffee = null;
+    switch (type) {
+        case EXPRESSO: coffee = new Expresso();
+        case LATTE: coffee = new Latte();
+    }
+    return coffee;
+}

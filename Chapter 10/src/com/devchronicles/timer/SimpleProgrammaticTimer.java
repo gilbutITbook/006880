@@ -1,0 +1,20 @@
+﻿package com.devchronicles.timer;
+
+import javax.annotation.Resource;
+import javax.ejb.Timeout;
+import javax.ejb.TimerService;
+
+
+public class SimpleProgrammaticTimer {
+    @Resource
+    TimerService timerService;
+
+    public void setTimer() {
+        timerService.createTimer(30000, "새 타이머");
+    }
+
+    @Timeout
+    public void performTask() {
+        System.out.println("단순한 작업을 실행하였습니다.");
+    }
+}

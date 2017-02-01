@@ -1,0 +1,25 @@
+﻿본문에 등장한 예제 코드 파일은 ChapterXX/src/Snippets 폴더에 순서대로 들어 있습니다.
+패키지는 com.devchronicles 뒤에 각 장별 주제를 덧붙여 명명했습니다. (예: com.devchronicles.factory)
+패키지명이 중복되는 경우엔 클래스/패키지명 뒤에 예제 번호를 붙여 알아볼 수 있게 해놓았습니다.
+
+디렉토리 구조는 이렇습니다.
+
+Chapter 6
+	/src
+		/com
+			/devchronicles
+				/factory
+					- EventProducer.java
+					- ...
+		/Snippets
+			- LISTING 6-1
+			- LISTING 6-2
+
+여러 소스 파일에 걸쳐 있는 경우는, 하위 패키지를 따로 만들어 넣었습니다.
+
+여러분이 선호하는 IDE에 예제 코드를 직접 임포트하세요.
+소스를 배포/실행할 때 필요한 서버는 자바 EE 호환 서버라면 어떤 것이든 좋습니다.
+이 책의 예제는 자바 EE 기준 애플리케이션 서버인 글래스피시(Glassfish)에서 모두 테스트해봤으니 자바 EE 호환 서버에선 코드를 수정하지 않아도 바로 작동합니다.
+
+즐거운 시간 되세요!
+알렉스 & 무라트

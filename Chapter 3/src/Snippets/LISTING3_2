@@ -1,0 +1,44 @@
+﻿package com.devchronicles.facade;
+
+import javax.ejb.Stateless;
+
+@Stateless
+public class CustomerService { 
+    public long getCustomer(int sessionID) {
+        // 로그인한 고객 ID를 조회합니다.
+        return 100005L;
+    }
+    public boolean checkId(long x) {
+        // 고객 ID가 올바른지 체크합니다.
+        return true;
+    }
+}
+
+package com.devchronicles.facade;
+
+import javax.ejb.Stateless;
+
+@Stateless
+public class LoanService {
+    public boolean checkCreditRating(long id, double amount) {
+        // 고객의 신용 등급이 해당 금액을 대출할 수 있는지 체크합니다.
+        return true;
+    }
+}
+
+
+package com.devchronicles.facade;
+
+import javax.ejb.Stateless;
+
+@Stateless
+public class AccountService {
+    public boolean getLoan(double amount) {
+        // 계좌 잔액이 충분한지 확인합니다.
+        return true;
+    }
+    public boolean setCustomerBalance(long id, double amount) {
+        // 계좌 잔액을 업데이트합니다.
+        return true;
+    }
+}

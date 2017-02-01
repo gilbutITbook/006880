@@ -1,0 +1,5 @@
+﻿public class CoffeeMachine extends DrinksMachine {
+    public Drink dispenseDrink() {
+        return new Coffee();
+    }
+}

@@ -1,0 +1,10 @@
+﻿@Stateless
+@TransactionAttribute(TransactionAttributeType.REQUIRED)
+public class EventService {
+    @Inject
+    private String message;
+
+    public void startService() {
+        System.out.println("서비스 호출 시작: " + message);
+    }
+}

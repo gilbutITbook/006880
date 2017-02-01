@@ -1,0 +1,19 @@
+﻿package com.devchronicles.singleton;
+
+public class MySingleton {
+
+    private volatile MySingleton instance;
+
+    private MySingleton() {}
+
+    public MySingleton getInstance() {
+            if (instance == null) { // 1
+                synchronized (MySingleton.class) {
+                    if (instance == null) { // 2
+                        instance = new MySingleton();
+                    }
+                }
+            }
+            return instance;
+    }
+}

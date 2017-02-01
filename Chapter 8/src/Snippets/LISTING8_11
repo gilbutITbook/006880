@@ -1,0 +1,17 @@
+﻿package com.devchronicles.interceptor;
+  
+import javax.interceptor.Interceptors;
+  
+@Secure
+public class SomeBusinessBean {
+  
+    public void startService(){
+        // 복잡한 비즈니스 로직
+        Logger.getLogger("AppLog").info("완료...");
+    }
+   
+    public void startAnotherService(){
+        // 복잡한 비즈니스 로직
+        Logger.getLogger("AppLog").info("도 완료...");
+    }
+}

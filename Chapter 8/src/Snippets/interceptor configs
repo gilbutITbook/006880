@@ -1,0 +1,19 @@
+﻿<ejb-jar...>
+    <interceptors>
+        <interceptor>
+            <interceptor-class>
+                com.devchronicles.SecurityInterceptor
+            </interceptor-class>
+        </interceptor>
+    </interceptors>
+    <assembly-descriptor>
+        <interceptor-binding>
+            <ejb-name>*</ejb-name>
+            <interceptor-class>
+                <interceptor-class>
+                    com.devchronicles.SecurityInterceptor
+                </interceptor-class>
+            </interceptor-class>
+        </interceptor-binding>
+    </assembly-descriptor>
+</ejb-jar>

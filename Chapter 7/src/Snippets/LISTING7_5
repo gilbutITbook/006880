@@ -1,0 +1,10 @@
+﻿public class NoCostExtra extends Extra {
+
+    public NoCostExtra(String label, double price, Order order) {
+        super(label, price, order);
+    }
+
+    public Double getPrice() {
+        return order.getPrice();
+    }
+}

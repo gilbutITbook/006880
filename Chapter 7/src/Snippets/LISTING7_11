@@ -1,0 +1,43 @@
+﻿@ClearanceSale
+public class Plate implements Product {
+
+    private String label = "접시";
+    private double price = 50.00;
+    
+    public void setLabel(String label) {
+        this.label = label;
+    }
+    
+    public void setPrice(double price) {
+        this.price = price;
+    }
+    
+    public String getLabel() {
+        return label;
+    }
+    
+    public double getPrice() {
+        return price;
+    }
+    
+    public String generateLabel() {
+        return price + ", " + label;
+    }
+}
+
+/*
+@Qualifier
+@Retention(RUNTIME)
+@Target({FIELD, PARAMETER, TYPE})
+public @interface ClearanceSale {}
+*/
+
+/*
+@Priority(Interceptor.Priority.APPLICATION)
+@Decorator
+public class PriceDiscountDecorator extends AbstractDiscountDecorator
+
+@Priority(Interceptor.Priority.APPLICATION+10)
+@Decorator
+public class BlackFridayDiscountDecorator extends AbstractDiscountDecorator
+*/

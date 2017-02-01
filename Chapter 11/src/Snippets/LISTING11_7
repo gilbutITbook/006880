@@ -1,0 +1,27 @@
+﻿package com.devchronicles.observer;
+
+import javax.enterprise.event.Observes;
+import javax.enterprise.event.TransactionPhase;
+
+public class TransactionEventObserver {
+
+    public void onInProgress(@Observes String message) {
+        System.out.println("실행 중 메시지: " + message);
+    }
+
+    public void onSuccess(
+        @Observes(during = TransactionPhase.AFTER_SUCCESS) String message) {
+        System.out.println("성공 후 메시지: " + message);
+    }
+
+    public void onFailure(
+        @Observes(during = TransactionPhase.AFTER_FAILURE) String message) {
+        System.out.println("실패 후 메시지: " + message);
+    }
+
+    public void onCompletion(
+        @Observes(during = TransactionPhase.AFTER_COMPLETION) String message) {
+        System.out.println("완료 후 메시지: " + message);
+    }
+
+}
